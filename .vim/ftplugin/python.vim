@@ -1,0 +1,1 @@
+autocmd FileType python setlocal tabstop=4|set shiftwidth=4|set expandtab
