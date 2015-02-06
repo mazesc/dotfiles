@@ -50,11 +50,8 @@ plugins=(git sbt python screen svn safe-paste)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export LD_LIBRARY_PATH="/usr/lib:/usr/local/lib:/home/matthias/ratsy_v2.1.0_2010-06-17_0854/NuSMV-game/NuSMVWrap/nusmv/clib"
-export PYTHONPATH="/usr/lib/python2.6:/usr/lib/python2.6/site-packages"
-export PATH="$PATH:/usr/sbin:/sbin:$SCALAPATH/bin"
-export JAVA_HOME="/usr/lib/jvm/j2sdk1.6-oracle"
-export JDK_HOME="/usr/lib/jvm/j2sdk1.6-oracle"
+source .zsh_user_cfg.sh
+
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # export MANPATH="/usr/local/man:$MANPATH"

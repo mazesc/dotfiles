@@ -1,5 +1,5 @@
 " global settings
-" " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " 
+" " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " "
 if has("gui_running")
   set guioptions-=T
   set lines=50 columns=100
@@ -12,17 +12,22 @@ endif
 
 " Pathogen extract plugins into ~/.vim/bundle and they are added to runtimepath
 " automatically
-"call pathogen#infect()
+call pathogen#infect()
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 set nocompatible
 
-filetype on             "detect filetypes
-filetype plugin on      "load plugin file
-filetype indent on      "load indent file
+" TAB instead of spaces in Makefiles
+autocmd FileType make setlocal noexpandtab
 
-syntax on               "allow syntax highlsource explorer ighting
+" Continuously slows down vim when repeatedly opening files (reproducible by e.g. <C-e>
+" between a Scala file and .vimrc)
+"filetype on             "detect filetypes
+"filetype plugin on      "load plugin file
+"filetype indent on      "load indent file
+
+syntax on               "allow syntax highlighting
 
 set encoding=utf-8
 
@@ -58,12 +63,21 @@ set title
 
 set ttimeoutlen=50      "immediate update of statusbar when leaving insert mode
 
+set colorcolumn=80
 
-"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-"match OverLength /\%81v.\+/
+
+" [autocmds]
+" " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " "
+" Prevent multiple sourcing of autocmds
+augroup Group1
+  autocmd!
+  autocmd BufEnter *.tex map <C-t> :w<CR>:!pdflatex %<CR>
+  "autocmd vimenter * if !argc() | NERDTree | endif
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+augroup END
 
 " mappings
-" " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " 
+" " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " "
 set pastetoggle=<F2>
 
 " use comma as <Leader> key instead of backslash
@@ -91,14 +105,14 @@ nnoremap k gk
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 " [file specific]
-" " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " 
-autocmd BufEnter *.tex map <C-t> :w<CR>:!pdflatex %<CR>
+" " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " "
 
+au BufRead,BufNewFile *.thy setfiletype isabelle
 au BufRead,BufNewFile *.smt2 setfiletype smt-lib
 au BufRead,BufNewFile *.scala setfiletype scala
 
 " plugins
-" " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " 
+" " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " "
 "
 " CtrlP
 nmap ; :CtrlPBuffer<CR>
@@ -112,9 +126,11 @@ nmap ; :CtrlPBuffer<CR>
 
 " NerdTree
 map <C-n> :NERDTreeToggle<CR>
-"autocmd vimenter * if !argc() | NERDTree | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " Airline
 :let g:airline_powerline_fonts = 1
 :let g:airline_theme='dark'
+
+" Syntastic
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
