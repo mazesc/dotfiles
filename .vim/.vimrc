@@ -67,11 +67,13 @@ set colorcolumn=80
 
 
 " [autocmds]
+
 " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " "
 " Prevent multiple sourcing of autocmds
 augroup Group1
   autocmd!
   autocmd BufEnter *.tex map <C-t> :w<CR>:!pdflatex %<CR>
+  autocmd BufEnter *.tex map <C-y> :w<CR>:!xelatex %<CR>
   "autocmd vimenter * if !argc() | NERDTree | endif
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 augroup END
@@ -110,6 +112,8 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 au BufRead,BufNewFile *.thy setfiletype isabelle
 au BufRead,BufNewFile *.smt2 setfiletype smt-lib
 au BufRead,BufNewFile *.scala setfiletype scala
+au BufRead,BufNewFile *.tptp setfiletype tptp
+au BufRead,BufNewFile *.ML setfiletype sml
 
 " plugins
 " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " "

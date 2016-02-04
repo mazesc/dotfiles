@@ -150,6 +150,8 @@ syn keyword IsabelleCommandRule some_equality someI someI2 someI_ex
 syn keyword IsabelleCommandRule order_antisym
 syn keyword IsabelleCommandRule sym
 syn keyword IsabelleCommandRule iffD1 iffD2
+syn keyword IsabelleCommandRule iffI
+syn keyword IsabelleCommandRule FalseE
 syn keyword IsabelleCommandRule arg_cong
 syn keyword IsabelleCommandRule mult_le_mono1
 syn keyword IsabelleCommandRule mod_Suc
@@ -225,4 +227,4 @@ hi IsabelleCommandMethod     ctermfg=6 cterm=none guifg=cyan
 hi IsabelleCommandMethodMod  ctermfg=6 cterm=none guifg=cyan
 hi IsabelleCommandBigMethod  ctermfg=6 cterm=bold guifg=cyan gui=bold
 
-hi Normal guibg=black guifg=grey
+"hi Normal guibg=black guifg=white
