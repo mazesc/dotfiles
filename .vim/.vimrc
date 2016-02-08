@@ -130,6 +130,7 @@ nmap ; :CtrlPBuffer<CR>
 
 " NerdTree
 map <C-n> :NERDTreeToggle<CR>
+map <leader>t :TagbarToggle<CR>
 
 " Airline
 :let g:airline_powerline_fonts = 1
