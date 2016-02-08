@@ -50,7 +50,7 @@ plugins=(git sbt python screen svn safe-paste)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-source .zsh_user_cfg.sh
+source dotfiles/.zsh_user_cfg.sh
 
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
