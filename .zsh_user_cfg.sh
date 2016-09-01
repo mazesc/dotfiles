@@ -1,6 +1,6 @@
 #export LD_LIBRARY_PATH="/usr/lib:/usr/local/lib:/home/matthias/ratsy_v2.1.0_2010-06-17_0854/NuSMV-game/NuSMVWrap/nusmv/clib"
 #export PYTHONPATH="/usr/lib/python2.7:/usr/lib/python2.7/site-packages:/home/matthias/tools/z3/build"
-#export PATH="$PATH:/usr/sbin:/sbin:$SCALAPATH/bin"
+export PATH="$PATH:/usr/sbin:/home/matthias/bin"
 export JAVA_HOME="/usr/lib/jvm/jdk-8-oracle-x64"
 export JDK_HOME="/usr/lib/jvm/jdk-8-oracle-x64"
 

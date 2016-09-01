@@ -33,7 +33,11 @@ set encoding=utf-8
 
 "colorscheme mustang    "set colorscheme
 "colorscheme smyck      "set colorscheme
-colorscheme molokai     "set colorscheme
+"colorscheme molokai     "set colorscheme
+
+"let g:hybrid_reduced_contrast=1
+set background=dark
+colorscheme hybrid     "set colorscheme
 
 set number              "show line numbers
 
@@ -130,11 +134,11 @@ nmap ; :CtrlPBuffer<CR>
 
 " NerdTree
 map <C-n> :NERDTreeToggle<CR>
-map <leader>t :TagbarToggle<CR>
+map <C-t> :TagbarToggle<CR>
 
 " Airline
 :let g:airline_powerline_fonts = 1
-:let g:airline_theme='dark'
+:let g:airline_theme='hybrid'
 
 " Syntastic
 let g:syntastic_cpp_compiler = 'clang++'
