@@ -40,3 +40,6 @@
 [submodule ".vim/bundle/vim-fsharp"]
 	path = .vim/bundle/vim-fsharp
 	url = https://github.com/fsharp/vim-fsharp
+[submodule ".vim/bundle/vim-sketch"]
+	path = .vim/bundle/vim-sketch
+	url = https://github.com/mschlaipfer/vim-sketch.git

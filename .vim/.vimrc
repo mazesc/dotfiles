@@ -118,7 +118,7 @@ au BufRead,BufNewFile *.smt2 setfiletype smt-lib
 au BufRead,BufNewFile *.scala setfiletype scala
 au BufRead,BufNewFile *.tptp setfiletype tptp
 au BufRead,BufNewFile *.ML setfiletype sml
-au BufRead,BufNewFile *.sk setfiletype sketch
+au BufRead,BufNewFile *.sk set filetype=sketch
 
 " plugins
 " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " "
