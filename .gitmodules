@@ -43,3 +43,6 @@
 [submodule ".vim/bundle/vim-sketch"]
 	path = .vim/bundle/vim-sketch
 	url = https://github.com/mschlaipfer/vim-sketch.git
+[submodule ".vim/bundle/supertab"]
+	path = .vim/bundle/supertab
+	url = https://github.com/ervandew/supertab
