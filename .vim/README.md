@@ -8,7 +8,7 @@ Check out using:
 ```
 git init <repo>
 cd <repo>
-git remote add –f origin https://github.com/mazesc/dotvim
+git remote add –f origin https://github.com/mschlaipfer/dotvim
 git pull origin master
 ```
 
