@@ -196,6 +196,7 @@ theme.volume = lain.widget.alsa({
         widget:set_markup(markup.fontfg(theme.font, "#7493d2", volume_now.level .. "% "))
     end
 })
+theme.pulsevolume = lain.widget.pulse()
 
 -- Net
 local netdownicon = wibox.widget.imagebox(theme.widget_netdown)
@@ -307,6 +308,7 @@ function theme.at_screen_connect(s)
             netupinfo.widget,
             volicon,
             theme.volume.widget,
+            -- theme.pulsevolume.widget,
             memicon,
             memory.widget,
             cpuicon,

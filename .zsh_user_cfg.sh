@@ -1,4 +1,4 @@
-export PATH="$PATH:/usr/sbin:/home/matthias/bin"
+export PATH="$PATH:/usr/sbin"
 export JAVA_HOME="/usr/lib/jvm/jdk-8-oracle-x64"
 export JDK_HOME="/usr/lib/jvm/jdk-8-oracle-x64"
 
