@@ -1,48 +1,48 @@
 [submodule ".vim/bundle/fugitive"]
-	path = .vim/bundle/fugitive
+	path = vim/.vim/bundle/fugitive
 	url = http://github.com/tpope/vim-fugitive.git
 [submodule ".vim/bundle/snipmate"]
-	path = .vim/bundle/snipmate
+	path = vim/.vim/bundle/snipmate
 	url = git://github.com/garbas/vim-snipmate.git
 [submodule ".vim/bundle/tlib"]
-	path = .vim/bundle/tlib
+	path = vim/.vim/bundle/tlib
 	url = https://github.com/tomtom/tlib_vim.git
 [submodule ".vim/bundle/addon-mv-utils"]
-	path = .vim/bundle/addon-mv-utils
+	path = vim/.vim/bundle/addon-mv-utils
 	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
 [submodule ".vim/bundle/vim-snippets"]
-	path = .vim/bundle/vim-snippets
+	path = vim/.vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
 [submodule ".vim/bundle/nerdcommenter"]
-	path = .vim/bundle/nerdcommenter
+	path = vim/.vim/bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
 [submodule ".vim/bundle/ctrlp.vim"]
-	path = .vim/bundle/ctrlp.vim
+	path = vim/.vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
 [submodule ".vim/bundle/syntastic"]
-	path = .vim/bundle/syntastic
+	path = vim/.vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
 [submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
+	path = vim/.vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
 [submodule ".vim/bundle/vim-airline"]
-	path = .vim/bundle/vim-airline
+	path = vim/.vim/bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline
 [submodule ".vim/bundle/vim-scala"]
-	path = .vim/bundle/vim-scala
+	path = vim/.vim/bundle/vim-scala
 	url = https://github.com/derekwyatt/vim-scala
 [submodule ".vim/bundle/tagbar"]
-	path = .vim/bundle/tagbar
+	path = vim/.vim/bundle/tagbar
 	url = http://github.com/majutsushi/tagbar
 [submodule ".vim/bundle/vim-airline-themes"]
-	path = .vim/bundle/vim-airline-themes
+	path = vim/.vim/bundle/vim-airline-themes
 	url = http://github.com/vim-airline/vim-airline-themes
 [submodule ".vim/bundle/vim-fsharp"]
-	path = .vim/bundle/vim-fsharp
+	path = vim/.vim/bundle/vim-fsharp
 	url = https://github.com/fsharp/vim-fsharp
 [submodule ".vim/bundle/vim-sketch"]
-	path = .vim/bundle/vim-sketch
+	path = vim/.vim/bundle/vim-sketch
 	url = https://github.com/mschlaipfer/vim-sketch.git
 [submodule ".vim/bundle/supertab"]
-	path = .vim/bundle/supertab
+	path = vim/.vim/bundle/supertab
 	url = https://github.com/ervandew/supertab
