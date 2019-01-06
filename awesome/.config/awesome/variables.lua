@@ -25,7 +25,7 @@ is_laptop = true
 autostart = {
 	"compton -b",
 	"unclutter",
-	"wicd-gtk",
+	"nm-applet",
 	"redshift-gtk",
 	"blueman-applet",
 	"udiskie --smart-tray",
