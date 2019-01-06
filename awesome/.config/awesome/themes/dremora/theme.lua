@@ -269,7 +269,7 @@ vicious.register(theme.volumewidget, vicious.widgets.volume,
 					local vheader = ("<span color=\"%s\" font=\"%s\">%s</span>"):format(
 						vol_icon_color, theme.iconFont, vol_icon
 					)
-                    return ("<span color=\"%s\">%s %s%% </span>"):format(
+                    return ("<span color=\"%s\">%s %s </span>"):format(
 						vol_color, vheader, cur_vol
 					)
                 end, 2, {"Master", "-D", "pulse"})
