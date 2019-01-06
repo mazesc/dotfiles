@@ -171,12 +171,12 @@ vicious.register(
 		local fs_icon = ("<span color=\"%s\" font=\"%s\"></span>"):format(
 			"#fc4f8e", theme.iconFont	
 		)
-		return ("%s <span color=\"%s\">%s%%</span>"):format(
+		return ("%s <span color=\"%s\">%s°C</span>"):format(
 			fs_icon, white, args[1]
 		)
 	end,
 	19,
-	"thermal_zone1"
+	"thermal_zone0"
 )
 
 -- Mem
@@ -269,7 +269,7 @@ vicious.register(theme.volumewidget, vicious.widgets.volume,
 					local vheader = ("<span color=\"%s\" font=\"%s\">%s</span>"):format(
 						vol_icon_color, theme.iconFont, vol_icon
 					)
-                    return ("<span color=\"%s\">%s %s </span>"):format(
+                    return ("<span color=\"%s\">%s %s%% </span>"):format(
 						vol_color, vheader, cur_vol
 					)
                 end, 2, {"Master", "-D", "pulse"})
