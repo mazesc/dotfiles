@@ -23,7 +23,7 @@ kb_layout = "en"
 is_laptop = true
 
 autostart = {
-	--"compton -b",
+	"compton -b",
 	"unclutter",
 	"wicd-gtk",
 	"redshift-gtk",
