@@ -12,9 +12,9 @@ local separators = lain.util.separators
 local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/dremora"
 theme.wallpaper                                 = os.getenv("HOME") .. "/.config/wall.png"
-theme.font                                      = "Roboto Medium 9"
-theme.taglist_font                              = "Roboto Bold 9"
-theme.iconFont                                  = "Font Awesome 5 Free Regular 9"
+theme.font                                      = "Roboto Medium 11"
+theme.taglist_font                              = "Roboto Bold 11"
+theme.iconFont                                  = "Font Awesome 5 Free Regular 11"
 theme.fg_normal                                 = "#bbb"
 theme.fg_focus                                  = "#DDDCFF"
 theme.bg_normal                                 = "#2F343F"
@@ -342,7 +342,7 @@ function theme.at_screen_connect(s)
 	)
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = 19, bg = theme.bg_normal, fg = theme.fg_normal })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = 30, bg = theme.bg_normal, fg = theme.fg_normal })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
