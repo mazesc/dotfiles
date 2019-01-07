@@ -16,7 +16,7 @@ screen1 = "eDP1"
 screen2 = "HDMI-1"
 
 -- lockscreen = "betterlockscreen -l dimblur"
-lockscreen = "i3lock"
+lockscreen = scripts .. "lock"
 
 kb_layout = "en"
 
