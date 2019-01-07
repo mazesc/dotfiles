@@ -37,7 +37,10 @@ set encoding=utf-8
 
 "let g:hybrid_reduced_contrast=1
 set background=dark
-colorscheme hybrid     "set colorscheme
+"colorscheme hybrid     "set colorscheme
+colorscheme falcon     "set colorscheme
+
+set termguicolors
 
 set number              "show line numbers
 
@@ -138,13 +141,15 @@ map <C-n> :NERDTreeToggle<CR>
 map <C-t> :TagbarToggle<CR>
 
 " Airline
-:let g:airline_theme='hybrid'
-" let g:airline_powerline_fonts = 1
+":let g:airline_theme='hybrid'
+let g:falcon_airline = 1
+let g:airline_theme='falcon'
+let g:airline_powerline_fonts = 1
 
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
+"let g:airline_left_sep = ''
+"let g:airline_left_alt_sep = ''
+"let g:airline_right_sep = ''
+"let g:airline_right_alt_sep = ''
 
 " Syntastic
 let g:syntastic_cpp_compiler = 'clang++'
