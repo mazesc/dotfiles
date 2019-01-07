@@ -15,8 +15,8 @@ scripts = "~/.scripts/"
 screen1 = "eDP1"
 screen2 = "HDMI-1"
 
-lockscreen = "xlock"
 -- lockscreen = "betterlockscreen -l dimblur"
+lockscreen = "i3lock-fancy"
 
 kb_layout = "en"
 
