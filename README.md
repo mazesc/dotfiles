@@ -16,3 +16,6 @@ Dependencies:
   * rofi
   * unclutter
   * udiskie
+  * scrot
+  * i3lock
+  * (probably more)
