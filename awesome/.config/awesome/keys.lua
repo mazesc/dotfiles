@@ -99,7 +99,9 @@ globalkeys = gears.table.join(
 	awful.key({ modkey, shiftkey }, "r", function() awful.spawn(file2) end,
 		{description = "open secondary file manager", group = "apps"}),
 	awful.key({ modkey }, "m", function() awful.spawn(music) end,
-		{description = "open ncmpcpp", group = "apps"}),
+		{description = "open Spotify", group = "apps"}),
+	awful.key({ modkey }, "e", function() awful.spawn(editor) end,
+		{description = "open editor", group = "apps"}),
 
 	-- Awesome actions
 	awful.key({ modkey }, "F2", awesome.restart,

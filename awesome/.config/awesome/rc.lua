@@ -190,7 +190,7 @@ quake = lain.util.quake {
 	width = 1
 }
 
-awful.spawn.with_shell("setxkbmap " .. kb_layout)
+awful.spawn.with_shell("setxkbmap -layout " .. kb_layout .. " -option grp:alt_shift_toggle")
 awful.spawn.with_shell("pulsemixer --unmute")
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)

@@ -70,6 +70,11 @@ theme.cal = lain.widget.cal({
 }})
 mytextclock:disconnect_signal("mouse::enter", theme.cal.hover_on)
 
+-- Keyboard layout
+keyboardlayout_prefix = wibox.widget.textbox("")
+keyboardlayout_prefix.markup = "<span foreground=\"#a753fc\"" .. "\">" .. keyboardlayout_prefix.text .. "</span>"
+mykeyboardlayout = awful.widget.keyboardlayout()
+
 -- MPD
 theme.mpdwidget = wibox.widget.textbox()
 vicious.register(
@@ -367,6 +372,8 @@ function theme.at_screen_connect(s)
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
             first,
+      keyboardlayout_prefix,
+      mykeyboardlayout,
 			arll_pre,
 			wibox.container.background(theme.ther, theme.pw_bg),
 			arll_post,

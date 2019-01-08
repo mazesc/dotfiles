@@ -6,19 +6,18 @@ browser1 = "firefox"
 browser2 = "qutebrowser"
 editor = os.getenv("EDITOR") or "nvim"
 editor_cmd = terminal .. " -e " .. editor
-file1 = terminal .. " -e " .. "thunar"
+file1 = "thunar"
 file2 = "nemo"
-music = terminal .. " -e ncmpcpp"
+music = "spotify"
 
 scripts = "~/.scripts/"
 
 screen1 = "eDP1"
 screen2 = "HDMI-1"
 
--- lockscreen = "betterlockscreen -l dimblur"
 lockscreen = scripts .. "lock"
 
-kb_layout = "en"
+kb_layout = "us,de"
 
 is_laptop = true
 
@@ -58,7 +57,8 @@ awful.util.tagnames = {
 	{
 		{name = "1", sel = true},
 		{name = "2"},
-		{name = "3", lay = awful.layout.layouts[3], mw = 0.87},
+		--{name = "3", lay = awful.layout.layouts[3], mw = 0.87},
+		{name = "3"},
 		{name = "4"},
 		{name = "5"},
 		{name = "6"},
