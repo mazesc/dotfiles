@@ -1,16 +1,20 @@
 dotfiles
 ========
 
-My configuration files
+<p align="center">
+    <img src="https://github.com/mschlaipfer/dotfiles/raw/master/scrot.png">
+</p>
 
-Use `stow <dirname>` to automatically symlink dotfiles.
+Use [GNU Stow](https://www.gnu.org/software/stow/) to automatically symlink
+dotfiles: `stow <dirname>`.
 
-Wallpaper from https://www.pexels.com
+Wallpaper from https://www.pexels.com.
 
-Awesome config due to https://gitlab.com/kofteistkofte/
+Awesome config adapted from https://gitlab.com/kofteistkofte/.
+Keyboard layout widget due to https://github.com/giann/.
 
 After installing fonts (`stow fonts`) run: `fc-cache -f -v` and check with
-`fc-list`
+`fc-list`.
 
 Dependencies:
 
