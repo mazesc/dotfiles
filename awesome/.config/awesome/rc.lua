@@ -8,8 +8,8 @@ local naughty       = require("naughty")
 local lain          = require("lain")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
                       require("awful.hotkeys_popup.keys")
-local keys = require("keys")
-local variables = require("variables")
+local keys          = require("keys")
+local variables     = require("variables")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -93,8 +93,8 @@ awful.rules.rules = {
                      buttons = clientbuttons,
                      screen = awful.screen.preferred,
                      placement = awful.placement.no_overlap+awful.placement.no_offscreen,
-					 honor_padding = true,
-					 honor_workarea = true
+                     honor_padding = true,
+                     honor_workarea = true
      }
     },
 
@@ -191,7 +191,6 @@ quake = lain.util.quake {
 }
 
 awful.spawn.with_shell("setxkbmap -layout " .. kb_layout .. " -option grp:alt_shift_toggle")
-awful.spawn.with_shell("pulsemixer --unmute")
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)

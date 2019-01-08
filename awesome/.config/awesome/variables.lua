@@ -56,7 +56,7 @@ awful.layout.layouts = {
 awful.util.tagnames = {
 	{
 		{name = "1", sel = true},
-		{name = "2"},
+		{name = "2"}, -- gap = 0
 		--{name = "3", lay = awful.layout.layouts[3], mw = 0.87},
 		{name = "3"},
 		{name = "4"},
