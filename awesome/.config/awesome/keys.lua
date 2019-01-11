@@ -100,7 +100,7 @@ globalkeys = gears.table.join(
 		{description = "open secondary file manager", group = "apps"}),
 	awful.key({ modkey }, "m", function() awful.spawn(music) end,
 		{description = "open Spotify", group = "apps"}),
-	awful.key({ modkey }, "e", function() awful.spawn(editor) end,
+	awful.key({ modkey }, "e", function() awful.spawn(editor_cmd) end,
 		{description = "open editor", group = "apps"}),
 
 	-- Awesome actions
