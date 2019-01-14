@@ -8,12 +8,21 @@ editor = os.getenv("EDITOR") or "nvim"
 editor_cmd = terminal .. " " .. editor
 file1 = "thunar"
 file2 = "nemo"
+
 music = "spotify"
+music_playtoggle = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+-- music_playtoggle = "mpc toggle"
+music_stop = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Pause"
+-- music_stop = "mpc stop"
+music_next = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+-- music_next = "mpc next"
+music_prev = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+-- music_prev = "mpc prev"
 
 scripts = "~/.scripts/"
 
 screen1 = "eDP1"
-screen2 = "HDMI-1"
+screen2 = "HDMI2"
 
 lockscreen = scripts .. "lock"
 

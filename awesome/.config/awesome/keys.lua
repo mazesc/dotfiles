@@ -192,26 +192,26 @@ globalkeys = gears.table.join(
 	-- Media Controls
 	awful.key({}, "XF86AudioPlay",
 		function()
-			awful.spawn.with_shell("mpc toggle")
-			vicious.force({beautiful.mpdwidget, beautiful.mpd_prev, beautiful.mpd_toggle, beautiful.mpd_next})
+			awful.spawn.with_shell(music_playtoggle)
+			--vicious.force({beautiful.mpdwidget, beautiful.mpd_prev, beautiful.mpd_toggle, beautiful.mpd_next})
 		end,
 		{description = "toggle play/pause", group = "controls"}),
 	awful.key({}, "XF86AudioStop",
 		function()
-			awful.spawn.with_shell("mpc stop")
-			vicious.force({beautiful.mpdwidget, beautiful.mpd_prev, beautiful.mpd_toggle, beautiful.mpd_next})
+			awful.spawn.with_shell(music_stop)
+			--vicious.force({beautiful.mpdwidget, beautiful.mpd_prev, beautiful.mpd_toggle, beautiful.mpd_next})
 		end,
 		{description = "stops music", group = "controls"}),
 	awful.key({}, "XF86AudioNext",
 		function()
-			awful.spawn.with_shell("mpc next")
-			vicious.force({beautiful.mpdwidget, beautiful.mpd_prev, beautiful.mpd_toggle, beautiful.mpd_next})
+			awful.spawn.with_shell(music_next)
+			--vicious.force({beautiful.mpdwidget, beautiful.mpd_prev, beautiful.mpd_toggle, beautiful.mpd_next})
 		end,
 		{description = "next song", group = "controls"}),
 	awful.key({}, "XF86AudioPrev",
 		function()
-			awful.spawn.with_shell("mpc prev")
-			vicious.force({beautiful.mpdwidget, beautiful.mpd_prev, beautiful.mpd_toggle, beautiful.mpd_next})
+			awful.spawn.with_shell(music_prev)
+			--vicious.force({beautiful.mpdwidget, beautiful.mpd_prev, beautiful.mpd_toggle, beautiful.mpd_next})
 		end,
 		{description = "previous song", group = "controls"}),
 	

@@ -72,7 +72,7 @@ mytextclock:disconnect_signal("mouse::enter", theme.cal.hover_on)
 
 -- Keyboard layout
 keyboardlayout_prefix = wibox.widget.textbox("")
-keyboardlayout_prefix.markup = "<span foreground=\"#a753fc\"" .. "\">" .. keyboardlayout_prefix.text .. "</span>"
+keyboardlayout_prefix.markup = "<span foreground=\"#ffc552\">" .. keyboardlayout_prefix.text .. "</span>"
 mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- MPD
@@ -224,14 +224,18 @@ theme.bat = lain.widget.bat({
 			bat_icon = ""
 			icon_color = "#ff1e8e"
 		end
-        bat_header = "<span font=\"".. theme.iconFont .."\">" .. bat_icon .. "</span> "
-		if (bat_now.status == "Charging" or bat_now.status == "Full") then
+		if (bat_now.status == "Charging") then
 			bat_color = "#0883ff"
+      --bat_icon = ""
+    elseif (bat_now.status == "Full") then
+			bat_color = "#0883ff"
+      --bat_icon = ""
 		elseif (bat_now.status == "Discharging" and bat_perc <= 15) then
 			bat_color = "#ff1e8e"
 		else
 			bat_color = white
 		end
+        bat_header = "<span font=\"".. theme.iconFont .."\">" .. bat_icon .. "</span> "
         bat_p      = bat_perc .. "%"
 		if is_laptop then
 	        widget:set_markup(
@@ -269,7 +273,8 @@ vicious.register(theme.volumewidget, vicious.widgets.volume,
 					if label[args[2]] == "M" then
 						vol_color = "#ff1e8e"
 						vol_icon_color = "#ff1e8e"
-						cur_vol = "M"
+            vol_icon = ""
+						--cur_vol = "M"
 					end
 					local vheader = ("<span color=\"%s\" font=\"%s\">%s</span>"):format(
 						vol_icon_color, theme.iconFont, vol_icon
@@ -352,7 +357,7 @@ function theme.at_screen_connect(s)
     -- Add widgets to the wibox
     s.mywibox:setup {
         layout = wibox.layout.align.horizontal,
-		expand = 'none',
+        expand = 'none',
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
             s.mylayoutbox,
@@ -360,32 +365,32 @@ function theme.at_screen_connect(s)
             s.mytaglist,
             s.mypromptbox,
             first,
-			-- arrl_pre,
-			-- wibox.container.background(theme.mpd_prev, theme.pw_bg),
-			-- wibox.container.background(theme.mpd_toggle, theme.pw_bg),
-			-- wibox.container.background(theme.mpd_next, theme.pw_bg),
-			-- arrl_post,
-			-- theme.mpdwidget,
+            -- arrl_pre,
+            -- wibox.container.background(theme.mpd_prev, theme.pw_bg),
+            -- wibox.container.background(theme.mpd_toggle, theme.pw_bg),
+            -- wibox.container.background(theme.mpd_next, theme.pw_bg),
+            -- arrl_post,
+            -- theme.mpdwidget,
         },
         wibox.container.place(mytextclock, "center"),
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            wibox.widget.systray(),
+            wibox.layout.margin(wibox.widget.systray(), 3, 3, 3, 3),
             first,
-      keyboardlayout_prefix,
-      mykeyboardlayout,
-			arll_pre,
-			wibox.container.background(theme.ther, theme.pw_bg),
-			arll_post,
-			theme.fs,
-			arll_pre,
-			wibox.container.background(theme.cpu.widget, theme.pw_bg),
-			arll_post,
-			theme.mem,
-			arll_pre,
-			wibox.container.background(theme.volumewidget, theme.pw_bg),
-			arll_post,
-			theme.bat,
+            arll_pre,
+            wibox.container.background(keyboardlayout_prefix, theme.pw_bg),
+            wibox.container.background(mykeyboardlayout, theme.pw_bg),
+            arll_post,
+            theme.ther,
+            -- theme.fs,
+            arll_pre,
+            wibox.container.background(theme.cpu.widget, theme.pw_bg),
+            arll_post,
+            theme.mem,
+            arll_pre,
+            wibox.container.background(theme.volumewidget, theme.pw_bg),
+            arll_post,
+            theme.bat,
         },
     }
 end
