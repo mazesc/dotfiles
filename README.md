@@ -6,7 +6,13 @@ dotfiles
 </p>
 
 Use [GNU Stow](https://www.gnu.org/software/stow/) to automatically symlink
-dotfiles: `stow <dirname>`.
+dotfiles: `stow <dirname>`. E.g., to install the awesome configuration, navigate
+to the `dotfiles` directory and run 
+
+`stow awesome`.
+
+`stow` will automatically generate the necessary directories in `~/.config` and
+symlink the configuration there.
 
 Wallpaper from https://www.pexels.com.
 
