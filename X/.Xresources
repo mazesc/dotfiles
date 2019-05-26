@@ -23,3 +23,5 @@ Xft.rgba: rgb
 *.color14:    #85CCBF
 *.color7:     #B4B4B9
 *.color15:    #F8F8FF
+URxvt*font: xft:DejaVu Sans Mono:size=14
+!URxvt*font: xft:Fantasque Sans Mono:size=14
